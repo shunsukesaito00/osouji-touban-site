@@ -1,0 +1,54 @@
+# GitHub Pages への静的デプロイ（ホワイトリスト方式）。
+# Pages を「GitHub Actions」ソースで有効化した後に動作します。
+# 秘密情報は扱いません。
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble public site (whitelist)
+        run: |
+          set -euo pipefail
+          mkdir -p _site/privacy _site/terms _site/support _site/assets/css _site/assets/img
+          cp index.html 404.html _site/
+          cp privacy/index.html _site/privacy/
+          cp terms/index.html _site/terms/
+          cp support/index.html _site/support/
+          cp assets/css/site.css _site/assets/css/
+          cp assets/img/favicon.svg _site/assets/img/
+          # デバッグ出力に秘密情報を出さない（パス一覧のみ）
+          find _site -type f | sort
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
