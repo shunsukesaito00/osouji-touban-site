@@ -29,8 +29,8 @@
 - [x] 相対リンクでホーム／privacy／terms／support を接続
 - [x] 解析 SDK なし・追加 JS なし
 - [x] デプロイはホワイトリスト方式
-- [ ] GitHub Pages を Actions ソースで有効化（**ユーザー最終承認後**）
-- [ ] HTTPS で各 URL にアクセスできることを確認（承認後）
+- [x] GitHub Pages を Actions ソースで有効化（2026-11-07）
+- [x] HTTPS で各 URL にアクセスできることを確認（2026-11-07）
 - [ ] App Store Connect に PP URL・サポート URL を登録（承認後）
 
 ## Private リポジトリ側（別作業）

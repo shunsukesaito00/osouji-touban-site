@@ -1,10 +1,9 @@
 # App Store Connect 登録用 URL 一覧
 
-GitHub Pages（プロジェクトサイト）を有効化した後の想定 URL です。  
-**現時点では Pages 未有効のため、ブラウザでの到達確認は未実施です。**
+GitHub Pages（プロジェクトサイト）公開済み（2026-11-07）。HTTPS 到達確認済み。
 
 リポジトリ: `https://github.com/shunsukesaito00/osouji-touban-site`  
-想定サイトルート: `https://shunsukesaito00.github.io/osouji-touban-site/`
+サイトルート: `https://shunsukesaito00.github.io/osouji-touban-site/`
 
 | Connect 項目 | URL |
 |---|---|
