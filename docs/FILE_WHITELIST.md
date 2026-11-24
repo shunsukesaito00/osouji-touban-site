@@ -11,6 +11,8 @@ GitHub Pages にデプロイされる成果物は、ワークフローが `_site
 | `terms/index.html` | 利用規約 |
 | `support/index.html` | サポート・FAQ |
 | `404.html` | 404 ページ |
+| `ads.txt` | Authorized Digital Sellers（Web / AdSense 等） |
+| `app-ads.txt` | Authorized Digital Sellers for Apps（AdMob） |
 | `assets/css/site.css` | スタイル |
 | `assets/img/favicon.svg` | ファビコン |
 

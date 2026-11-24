@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site/privacy _site/terms _site/support _site/assets/css _site/assets/img
-          cp index.html 404.html _site/
+          cp index.html 404.html ads.txt app-ads.txt _site/
           cp privacy/index.html _site/privacy/
           cp terms/index.html _site/terms/
           cp support/index.html _site/support/

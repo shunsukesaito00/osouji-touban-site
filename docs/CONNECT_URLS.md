@@ -12,4 +12,13 @@ GitHub Pages（プロジェクトサイト）公開済み（2026-11-07）。HTTP
 | マーケティング（任意） | `https://shunsukesaito00.github.io/osouji-touban-site/` |
 | 利用規約（任意・標準 EULA 以外を使う場合） | `https://shunsukesaito00.github.io/osouji-touban-site/terms/` |
 
+## AdMob / ads.txt
+
+| 用途 | URL |
+|---|---|
+| ads.txt | `https://shunsukesaito00.github.io/osouji-touban-site/ads.txt` |
+| app-ads.txt（アプリ向け・AdMob推奨） | `https://shunsukesaito00.github.io/osouji-touban-site/app-ads.txt` |
+
+AdMob のアプリ設定では、ストアのデベロッパ／マーケティング URL と同じサイト上の `app-ads.txt` をクロールします。
+
 独自ドメインは使用しません。
